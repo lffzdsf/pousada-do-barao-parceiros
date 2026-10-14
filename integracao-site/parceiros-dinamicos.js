@@ -1,4 +1,4 @@
-const PARTNERS_API_URL = 'COLE_AQUI_A_URL_DA_API_PUBLICA';
+const PARTNERS_API_URL = 'https://script.google.com/macros/s/AKfycbw40vJyZUFkFyTYtFaqizp5mRuaN3C2RAKbQPNhE68q8zLZDinaK6BBy0VKj4Uozh6Ncw/exec';
 
 async function carregarParceiros() {
   const grid = document.querySelector('#partners-grid');
@@ -23,4 +23,3 @@ async function carregarParceiros() {
 function escapeHtml(v){return String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 function safeUrl(v){try{const u=new URL(v,location.origin);return ['http:','https:'].includes(u.protocol)?u.href:'#'}catch{return '#'}}
 document.addEventListener('DOMContentLoaded', carregarParceiros);
-
